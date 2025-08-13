@@ -1,16 +1,19 @@
 body {
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100svw;
+  height: 100svh;
 }
 img {
   align-items: center;
-  width: 200px;
+  width: 300px;
   height: auto;
   animation-name: imgflip;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  margin-top: 150px;
 }
 @keyframes imgflip {
   0% {
@@ -25,6 +28,8 @@ button {
   animation-duration: 2s;
   animation-iteration-count: infinite;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  max-height: 50px;
+  max-width: 150px;
 }
 button:hover {
   transform: scale(1.2);
@@ -42,4 +47,40 @@ button:hover {
   70% {
     transform: translateX(-40px);
   }
+}
+main {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+header {
+  width: 100%;
+}
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+  list-style-type: none;
+  /* gap: 15px; */
+  justify-content: space-evenly;
+  padding: 15px;
+}
+li {
+  background-color: gray;
+  padding: 15px;
+  transition: border-radius 0.5s ease;
+  border-radius: 50px;
+}
+li:hover {
+  background-color: rgb(158, 157, 157);
+  transform: scale(1.05);
+  border-radius: 0px;
+}
+#images {
+  display: flex;
+  height: 30%;
+  width: 50%;
 }
